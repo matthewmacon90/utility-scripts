@@ -36,5 +36,12 @@ const budget = (totalMonthyBills=2000, grossIncomeYear=30000, federalTax=22, sta
     return totalBudgetObject;
 };
 
-budget(2897.71, 70000, 22, 2.75, 2.5, 180, 5);
-// budget();
+const convertHourlyPayToYearly = (hourlyPay=15, hoursPerWeek=40, weeksPerYear=52) => {
+    const yearlyPay = hourlyPay * hoursPerWeek * weeksPerYear;
+    console.log(`Your yearly gross pay is $${yearlyPay}`);
+    return yearlyPay;
+};
+
+// budget(2897.71, 51840, 22, 2.75, 2.5, 180, 5);
+// const yearlyPay = convertHourlyPayToYearly(38.47, 40, 52);
+// budget(2897.71, yearlyPay, 22, 2.75, 2.5, 180, 5);
